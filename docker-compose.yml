@@ -1,0 +1,61 @@
+version: '3'
+services:
+  web_python_adminpanel:
+    build: web_python_adminpanel/
+    ports:
+      - "2531:2531"
+    container_name: web_python_adminpanel
+    restart: always
+    read_only: true
+  web_python_api1:
+    build: web_python_api1/
+    ports:
+      - "2532:2532"
+    container_name: web_python_api1
+    restart: always
+  web_python_api2:
+    build: web_python_api2/
+    ports:
+      - "2533:2533"
+    container_name: web_python_api2
+    restart: always
+  web_python_api3:
+    build: web_python_api3/
+    ports:
+      - "2534:2534"
+    container_name: web_python_api3
+    restart: always
+  web_python_noteapplication1:
+    build: web_python_noteapplication1/
+    ports:
+      - "2535:2535"
+    container_name: web_python_noteapplication1
+    read_only: true
+    restart: always
+  web_python_noteapplication2:
+    build: web_python_noteapplication2/
+    ports:
+      - "2536:2536"
+    container_name: web_python_noteapplication2
+    read_only: true
+    restart: always
+  misc_python_sqlunion:
+    build: misc_python_sqlunion/
+    ports:
+      - "54129:54129"
+    container_name: misc_python_sqlunion
+    restart: always
+  web_java_backdoor:
+    build: web_java_backdoor/
+    ports:
+      - "8080:8080"
+      - "9001:9001"
+    container_name: web_java_backdoor
+    restart: always
+  web_php_commandinjection:
+    build: web_php_commandinjection/
+    ports:
+      - "2538:80"
+    container_name: web_php_commandinjection
+    restart: always
+
